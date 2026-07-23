@@ -316,7 +316,7 @@
         }
 
         /* ==========================================================================
-           5. HERO SECTION (LEFT-CENTERED CONTENT + CENTERED SCROLL ARROW)
+           5. HERO SECTION
            ========================================================================== */
         #hero {
             width: 100%;
@@ -324,7 +324,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; /* Center container & scroll guide on page */
+            align-items: center;
             background: linear-gradient(
                 to right, 
                 rgba(8, 8, 10, 0.98) 0%, 
@@ -341,11 +341,11 @@
         .hero {
             width: 100%;
             display: flex;
-            justify-content: flex-start; /* Keeps text block left-centered within container */
+            justify-content: flex-start;
         }
 
         .hero-content {
-            max-width: 680px; /* Constrains text block so it doesn't overlap face */
+            max-width: 680px;
             text-align: left;
         }
 
@@ -373,7 +373,7 @@
             margin-top: 50px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center arrow & label in screen center */
+            align-items: center;
             justify-content: center;
             text-align: center;
             gap: 8px;
@@ -582,7 +582,7 @@
         }
 
         /* ==========================================================================
-           8. CONTENT PERFORMANCE ANALYTICS (COLORED METRIC NUMBERS)
+           8. CONTENT PERFORMANCE ANALYTICS
            ========================================================================== */
         .analytics-grid {
             display: grid;
@@ -603,8 +603,8 @@
         }
 
         .analytics-card:hover {
-            border-color: var(--accent-emerald);
             transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.6);
         }
 
         .analytics-header {
@@ -622,8 +622,9 @@
 
         .analytics-value {
             font-family: var(--font-heading);
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
+            line-height: 1;
         }
 
         .progress-bar-bg {
@@ -637,7 +638,6 @@
 
         .progress-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--accent-emerald), #60A5FA);
             border-radius: 10px;
         }
 
@@ -715,7 +715,7 @@
         }
 
         /* ==========================================================================
-           10. STRATEGIC WORKFLOW PROCESS (FULL 6 STEPS)
+           10. STRATEGIC WORKFLOW PROCESS
            ========================================================================== */
         .process-grid {
             display: grid;
@@ -1083,7 +1083,7 @@
         }
 
         /* ==========================================================================
-           16. CONTACT & FOOTER (PLATFORM BRAND-SPECIFIC SOCIAL COLORS)
+           16. CONTACT & FOOTER
            ========================================================================== */
         .contact-wrapper {
             display: grid;
@@ -1514,55 +1514,73 @@
     <section id="analytics" class="reveal" style="background: var(--bg-secondary);">
         <div class="container">
             <div style="text-align: center;">
-                <span class="tag tag-emerald">Retention Benchmark</span>
-                <h2 style="font-size: 2.1rem; margin-top: 10px;">Content Performance <span class="gold-text">Analytics</span></h2>
-                <p class="section-subtitle">A data-driven approach ensuring content performs consistently above platform averages.</p>
+                <span class="tag tag-emerald">Data-Backed Results</span>
+                <h2 style="font-size: 2.1rem; margin-top: 10px;">
+                    Content Performance <span class="gold-text">Analytics</span>
+                </h2>
+                <p class="section-subtitle">
+                    Proven retention benchmarks engineered across top short-form campaigns vs. organic platform baselines.
+                </p>
             </div>
 
             <div class="analytics-grid">
-                <div class="analytics-card">
+                
+                <div class="analytics-card" style="border-top: 3px solid var(--accent-emerald);">
                     <div class="analytics-header">
                         <span class="analytics-metric-title">3s Hook Retention</span>
-                        <span class="tag tag-emerald">+49.8% Above avg. user</span>
+                        <span class="tag tag-emerald">Top 5% Creator</span>
                     </div>
                     <div class="analytics-value emerald-text">82.4%</div>
                     <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 82.4%;"></div>
+                        <div class="progress-bar-fill" style="width: 82.4%; background: linear-gradient(90deg, #00C897, #10B981);"></div>
                     </div>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+                        <span class="emerald-text" style="font-weight: 600;">+49.8% Higher</span> than standard TikTok baseline (~55%).
+                    </p>
                 </div>
 
-                <div class="analytics-card">
+                <div class="analytics-card" style="border-top: 3px solid var(--accent-gold);">
                     <div class="analytics-header">
                         <span class="analytics-metric-title">Full Video Completion</span>
-                        <span class="tag tag-gold">+134% Above Avg.</span>
+                        <span class="tag tag-gold">2.3x Platform Std</span>
                     </div>
                     <div class="analytics-value gold-text">23.4%</div>
                     <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 24%;"></div>
+                        <div class="progress-bar-fill" style="width: 65%; background: linear-gradient(90deg, #C6A87D, #E6CA94);"></div>
                     </div>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+                        <span class="gold-text" style="font-weight: 600;">+134% Above Avg</span> for 20s+ retention edits (~10%).
+                    </p>
                 </div>
 
-                <div class="analytics-card">
+                <div class="analytics-card" style="border-top: 3px solid #2563EB;">
                     <div class="analytics-header">
                         <span class="analytics-metric-title">Avg. Watch Duration</span>
-                        <span class="tag tag-emerald">+58.2% vs. Avg. Creator</span>
+                        <span class="tag" style="background: rgba(37,99,235,0.15); color: #60A5FA; border: 1px solid #3B82F6;">High Retention</span>
                     </div>
-                    <div class="analytics-value emerald-text">71.2%</div>
+                    <div class="analytics-value" style="color: #60A5FA;">71.2%</div>
                     <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 72%;"></div>
+                        <div class="progress-bar-fill" style="width: 71.2%; background: linear-gradient(90deg, #2563EB, #60A5FA);"></div>
                     </div>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+                        <span style="color: #60A5FA; font-weight: 600;">+58.2% Longer</span> viewing time vs average scrollers.
+                    </p>
                 </div>
 
-                <div class="analytics-card">
+                <div class="analytics-card" style="border-top: 3px solid var(--accent-emerald);">
                     <div class="analytics-header">
                         <span class="analytics-metric-title">Peak Engagement Rate</span>
-                        <span class="tag tag-gold">+47.5% Above Industry Avg</span>
+                        <span class="tag tag-emerald">Viral Driver</span>
                     </div>
-                    <div class="analytics-value gold-text">5.90%</div>
+                    <div class="analytics-value emerald-text">5.90%</div>
                     <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 42%;"></div>
+                        <div class="progress-bar-fill" style="width: 59%; background: linear-gradient(90deg, #00C897, #60A5FA);"></div>
                     </div>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+                        <span class="emerald-text" style="font-weight: 600;">+47.5% More Active</span> interactions (shares, saves, comments).
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
