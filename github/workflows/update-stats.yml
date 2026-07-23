@@ -1,0 +1,27 @@
+name: Update Social Media Stats
+
+on:
+  schedule:
+    # Runs every 12 hours automatically
+    - cron: '0 */12 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Fetch Latest Stats
+        run: |
+          # Python or Node.js script to call TikTok / Meta / YouTube APIs
+          echo "Syncing social analytics..."
+
+      - name: Commit and Push Updated Stats
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
+          git add data/stats.json
+          git commit -m "Auto-update live social media stats [skip ci]" || exit 0
+          git push
