@@ -778,6 +778,7 @@
         /* ==========================================================================
            11. CINEMATIC FILMS & AUDIO SECTIONS
            ========================================================================== */
+        /* CINEMATIC FILMS & AUDIO SECTIONS STYLING */
         .films-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -794,24 +795,29 @@
             flex-direction: column;
             gap: 20px;
             transition: all 0.3s ease;
+            height: 100%; /* Ensures equal height across grid cards */
         }
 
         .film-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent-gold);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
         }
 
         .film-embed-container {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 9; /* Standard widescreen ratio for all media */
             border-radius: 8px;
             overflow: hidden;
             background: #000;
+            position: relative;
         }
 
-        .film-embed-container iframe {
+        .film-embed-container iframe,
+        .film-embed-container img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
             border: none;
         }
 
@@ -819,6 +825,7 @@
             font-family: var(--font-heading);
             font-size: 1.25rem;
             font-weight: 600;
+            color: var(--text-primary);
         }
 
         .film-role {
@@ -1765,42 +1772,50 @@
         </div>
     </section>
 
+    <section id="short-films" class="reveal">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2>Cinematic Films & <span class="gold-text">Storytelling</span></h2>
+                <p class="section-subtitle">Long-form narrative video projects demonstrating direction, camera operating, and color grading.</p>
+            </div>
+
+            <div class="films-grid">
+                
+                <div class="film-card">
+                    <div class="film-embed-container">
+                        <iframe src="https://www.youtube.com/embed/WtGDujQVa14" title="SUDA Short Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <div class="film-title">SUDA | Short Film (VIPKI 2025 Submission)</div>
+                        <div class="film-role">Director / Cinematographer / Editor</div>
+                        <p class="film-description">Directed camera angles, color-graded raw LOG footage in DaVinci Resolve, and executed custom multi-track audio design.</p>
+                    </div>
+                </div>
+
+                <div class="film-card">
+                    <div class="film-embed-container">
+                        <iframe src="https://www.youtube.com/embed/VOekhaaw" title="Retak Music Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <div class="film-title">Retak (Azlan and the Typewriter) | MV Reimagined</div>
+                        <div class="film-role">Director / Editor / Videographer</div>
+                        <p class="film-description">Directed on-camera talent, handled camera operation, narrative cutting, and final output mastering for YouTube.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="sound-engineer" class="reveal" style="background: var(--bg-secondary);">
         <div class="container">
             <div style="text-align: center;">
                 <h2>Audio Production & <span class="gold-text">Sound Design</span></h2>
-                <p class="section-subtitle">Professional sound design, scoring, multi-track mixing, and acoustic mastering.</p>
+                <p class="section-subtitle">Professional sound design, music scoring, multi-track mixing, and acoustic mastering.</p>
             </div>
 
-            <div class="film-card">
-    <div class="film-embed-container" style="position: relative; overflow: hidden; border-radius: 8px;">
-        
-        <a href="https://www.tvikim.my/play/2452" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; height: 100%; text-decoration: none; position: relative;">
-            
-            <img src="assets/jiran-thumbnail.jpg" alt="Jiran - VIPKI 2024 Short Film Thumbnail" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            
-            <div style="position: absolute; inset: 0; background: rgba(8, 8, 10, 0.45); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; transition: background 0.3s ease;">
-                <span class="tag tag-gold" style="font-size: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.6);">
-                    🏆 2nd Place Winner (VIPKI 2024)
-                </span>
-                <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--accent-gold); color: #08080A; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; padding-left: 3px; box-shadow: 0 0 20px rgba(198, 168, 125, 0.5);">
-                    ▶
-                </div>
-                <span style="color: #FFFFFF; font-family: var(--font-code); font-size: 0.8rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
-                    Watch Stream on TVIKIM ↗
-                </span>
-            </div>
-        </a>
-
-    </div>
-    <div>
-        <div class="film-title">Jiran | VIPKI 2024 Award Winner</div>
-        <div class="film-role">Music Producer / Score Composer</div>
-        <p class="film-description">Produced and composed the original music score for this national short film project. Secured 2nd Place (Naib Johan) in the national Pertandingan Video Pendek Kefahaman Islam (VIPKI) 2024 organized by IKIM.</p>
-    </div>
-</div>
-
-            <div class="sound-card-wrapper">
+            <div class="films-grid">
+                
                 <div class="film-card">
                     <div class="film-embed-container">
                         <iframe src="https://www.youtube.com/embed/tA04Y_ANZcI" title="CNY X RAYA Music Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1811,6 +1826,31 @@
                         <p class="film-description">Composed custom musical themes, engineered sound effects, balanced multi-track vocal mixes, and mastered audio for digital release.</p>
                     </div>
                 </div>
+
+                <div class="film-card">
+                    <div class="film-embed-container">
+                        <a href="https://www.tvikim.my/play/2452" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; height: 100%; text-decoration: none; position: relative;">
+                            <img src="assets/jiran-thumbnail.jpg" alt="Jiran - VIPKI 2024 Short Film Thumbnail">
+                            <div style="position: absolute; inset: 0; background: rgba(8, 8, 10, 0.45); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; transition: background 0.3s ease;">
+                                <span class="tag tag-gold" style="font-size: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.6);">
+                                    🏆 2nd Place Winner (VIPKI 2024)
+                                </span>
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--accent-gold); color: #08080A; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; padding-left: 3px; box-shadow: 0 0 20px rgba(198, 168, 125, 0.5);">
+                                    ▶
+                                </div>
+                                <span style="color: #FFFFFF; font-family: var(--font-code); font-size: 0.8rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                                    Watch Stream on TVIKIM ↗
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="film-title">Jiran | VIPKI 2024 Award Winner</div>
+                        <div class="film-role">Music Producer / Score Composer</div>
+                        <p class="film-description">Produced and composed the original music score for this national short film project. Secured 2nd Place (Naib Johan) in the national Pertandingan Video Pendek Kefahaman Islam (VIPKI) 2024 organized by IKIM.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
