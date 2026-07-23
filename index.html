@@ -2008,24 +2008,29 @@
             revealElements.forEach(el => el.classList.add('active'));
         }
 
-        // Fetch Live Stats from JSON Data Feed
+        // Fetch Stats from Local JSON Feed with Graceful Fallback
         async function loadLiveStats() {
             try {
                 const response = await fetch('./data/stats.json?v=' + new Date().getTime());
-                if (!response.ok) return;
+                if (!response.ok) throw new Error('Failed to load stats.json');
+        
                 const stats = await response.json();
 
-                if (stats.total_views) {
-                    document.getElementById('metric-views').innerText = stats.total_views;
+                const viewsEl = document.getElementById('metric-views');
+                const engagementsEl = document.getElementById('metric-engagements');
+                const followersEl = document.getElementById('metric-followers');
+
+                if (viewsEl && stats.total_views) {
+                    viewsEl.innerText = stats.total_views;
                 }
-                if (stats.total_engagements) {
-                    document.getElementById('metric-engagements').innerText = stats.total_engagements;
+                if (engagementsEl && stats.total_engagements) {
+                    engagementsEl.innerText = stats.total_engagements;
                 }
-                if (stats.net_followers) {
-                    document.getElementById('metric-followers').innerText = stats.net_followers;
+                if (followersEl && stats.net_followers) {
+                    followersEl.innerText = stats.net_followers;
                 }
             } catch (err) {
-                console.log("Using cached baseline metrics.", err);
+                console.warn("Using inline baseline metrics as fallback:", err.message);
             }
         }
 
