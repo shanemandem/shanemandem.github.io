@@ -30,7 +30,8 @@
             --accent-gold-hover: #E6CA94;
             --accent-gold-glow: rgba(198, 168, 125, 0.15);
             --accent-emerald: #00C897;    /* Cyber Emerald */
-            --accent-emerald-glow: rgba(0, 200, 151, 0.15);
+            --accent-emerald-hover: #00E0A8;
+            --accent-emerald-glow: rgba(0, 200, 151, 0.18);
             --accent-cobalt: #2563EB;     /* Royal Cobalt */
 
             /* Typography */
@@ -75,10 +76,12 @@
 
         .gold-text {
             color: var(--accent-gold);
+            font-weight: 600;
         }
 
         .emerald-text {
             color: var(--accent-emerald);
+            font-weight: 600;
         }
 
         .section-subtitle {
@@ -155,6 +158,35 @@
             background-color: var(--accent-gold-hover);
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(198, 168, 125, 0.4);
+        }
+
+        /* Distinct Green Button Styling for Downloads */
+        .btn-emerald-primary {
+            background-color: var(--accent-emerald);
+            color: #08080A;
+            border: 1px solid var(--accent-emerald);
+            box-shadow: 0 4px 20px var(--accent-emerald-glow);
+        }
+
+        .btn-emerald-primary:hover {
+            background-color: var(--accent-emerald-hover);
+            border-color: var(--accent-emerald-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 200, 151, 0.4);
+        }
+
+        .btn-emerald-outline {
+            background-color: transparent;
+            color: var(--accent-emerald);
+            border: 1px solid var(--accent-emerald);
+        }
+
+        .btn-emerald-outline:hover {
+            border-color: var(--accent-emerald);
+            color: #08080A;
+            background: var(--accent-emerald);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px var(--accent-emerald-glow);
         }
 
         .btn-outline {
@@ -1229,7 +1261,7 @@
                     <li><a href="#process" class="nav-item">Process</a></li>
                     <li><a href="#skills" class="nav-item">Skills</a></li>
                     <li><a href="#contact" class="nav-item">Contact</a></li>
-                    <li><a href="Gregory_Shane_Bong_Resume.pdf" download class="btn btn-primary" style="padding: 8px 18px; min-height: auto; font-size: 0.85rem;">Resume PDF</a></li>
+                    <li><a href="Gregory_Shane_Bong_Resume.pdf" download class="btn btn-emerald-primary" style="padding: 8px 18px; min-height: auto; font-size: 0.85rem;">Resume PDF</a></li>
                 </ul>
             </nav>
         </div>
@@ -1240,10 +1272,10 @@
             <div class="hero-content">
                 <span class="tag tag-gold" style="margin-bottom: 20px;">Social Media Specialist & Short-Form Strategist</span>
                 <h1>Transforming Brand Attention Into <span class="gold-text">Measurable Growth & Retention</span></h1>
-                <p>Specializing in end-to-end videography, high-retention video editing, social media campaign management, and conversion-focused copywriting. I turn casual scrollers into loyal brand advocates across TikTok, Instagram Reels, and YouTube.</p>
+                <p>Specializing in <span class="gold-text">end-to-end videography</span>, <span class="emerald-text">high-retention video editing</span>, <span class="gold-text">social media campaign management</span>, and <span class="emerald-text">conversion-focused copywriting</span>. I turn casual scrollers into <span class="gold-text">loyal brand advocates</span> across TikTok, Instagram Reels, and YouTube.</p>
                 <div class="hero-actions">
                     <a href="#featured-videos" class="btn btn-primary">View Featured Work</a>
-                    <a href="Gregory_Shane_Bong_Resume.pdf" download class="btn btn-outline">Download Resume</a>
+                    <a href="Gregory_Shane_Bong_Resume.pdf" download class="btn btn-emerald-outline">Download Resume</a>
                 </div>
             </div>
         </div>
@@ -1293,7 +1325,7 @@
                     
                     <div class="video-card-stats">
                         <div class="video-stat-item">
-                            <span class="video-stat-value">310K+</span>
+                            <span class="video-stat-value gold-text">310K+</span>
                             <span class="video-stat-label">Organic Views</span>
                         </div>
                         <div class="video-stat-item">
@@ -1304,7 +1336,7 @@
 
                     <div class="case-breakdown-box">
                         <strong>Strategy & Hook</strong>
-                        <p>Leveraged tech pricing news with a 1.5-second pattern interrupt and kinetic subtitles.</p>
+                        <p>Leveraged tech pricing news with a <span class="gold-text">1.5-second pattern interrupt</span> and <span class="emerald-text">kinetic subtitles</span>.</p>
                     </div>
 
                     <div class="video-embed-container">
@@ -1319,7 +1351,7 @@
                     
                     <div class="video-card-stats">
                         <div class="video-stat-item">
-                            <span class="video-stat-value">132K+</span>
+                            <span class="video-stat-value gold-text">132K+</span>
                             <span class="video-stat-label">Organic Views</span>
                         </div>
                         <div class="video-stat-item">
@@ -1330,7 +1362,7 @@
 
                     <div class="case-breakdown-box">
                         <strong>Strategy & Hook</strong>
-                        <p>Curiosity-driven negative framing hook designed to retain viewers past the 3-second mark.</p>
+                        <p><span class="gold-text">Curiosity-driven negative framing hook</span> designed to retain viewers past the <span class="emerald-text">3-second mark</span>.</p>
                     </div>
 
                     <div class="video-embed-container">
@@ -1345,7 +1377,7 @@
                     
                     <div class="video-card-stats">
                         <div class="video-stat-item">
-                            <span class="video-stat-value">182K+</span>
+                            <span class="video-stat-value gold-text">182K+</span>
                             <span class="video-stat-label">Organic Views</span>
                         </div>
                         <div class="video-stat-item">
@@ -1356,7 +1388,7 @@
 
                     <div class="case-breakdown-box">
                         <strong>Strategy & Hook</strong>
-                        <p>Paced editorial cuts with sound effects to boost watch time completion rates.</p>
+                        <p>Paced editorial cuts with <span class="gold-text">sound effects</span> to boost <span class="emerald-text">watch time completion rates</span>.</p>
                     </div>
 
                     <div class="video-embed-container">
@@ -1463,9 +1495,9 @@
                     </div>
 
                     <ul class="achievements-list">
-                        <li>Engineered high-pace, retention-driven video hooks combined with strategic conversion copywriting.</li>
-                        <li>Generated over <strong>187K+ organic views</strong> across social media marketing campaigns without ad spend.</li>
-                        <li>Managed end-to-end production: scripting, content calendar planning, lighting setup, camera operation, and dynamic editing.</li>
+                        <li>Engineered <span class="emerald-text">high-pace, retention-driven video hooks</span> combined with strategic <span class="gold-text">conversion copywriting</span>.</li>
+                        <li>Generated over <strong class="emerald-text">187K+ organic views</strong> across social media marketing campaigns without ad spend.</li>
+                        <li>Managed end-to-end production: <span class="gold-text">scripting</span>, <span class="gold-text">content calendar planning</span>, lighting setup, camera operation, and <span class="emerald-text">dynamic editing</span>.</li>
                     </ul>
 
                     <div class="tiktok-video-grid">
@@ -1497,7 +1529,7 @@
                     </div>
 
                     <ul class="achievements-list">
-                        <li>Developed brand storytelling edits with SEO-focused copywriting resulting in <strong>60K+ organic views</strong>.</li>
+                        <li>Developed brand storytelling edits with <span class="gold-text">SEO-focused copywriting</span> resulting in <strong class="emerald-text">60K+ organic views</strong>.</li>
                         <li>Curated short-form promotional videos aligned with business aesthetics and local audience engagement trends.</li>
                     </ul>
                 </div>
@@ -1518,7 +1550,7 @@
                     <span class="transform-badge before">Original Raw Footage</span>
                     <ul class="transform-list before-list">
                         <li>Monotone talking-head delivery without visual resets</li>
-                        <li>Slow 4-second introductory hook causing 60% viewer dropoff</li>
+                        <li>Slow 4-second introductory hook causing <span style="color: #F87171; font-weight: 600;">60% viewer dropoff</span></li>
                         <li>Unedited long pauses and flat lighting</li>
                         <li>Generic automated captions without emphasis</li>
                     </ul>
@@ -1527,10 +1559,10 @@
                 <div class="transform-box">
                     <span class="transform-badge after">Shane's Retention Refactor</span>
                     <ul class="transform-list after-list">
-                        <li>Implemented dynamic 1.5s hook with punch-in visual interrupts</li>
-                        <li>Custom sound design (risers, swooshes, subtle impact hits)</li>
-                        <li>1.15x speed pacing with dead-air removal and kinetic typography</li>
-                        <li>Custom color grade in DaVinci Resolve & brand asset overlays</li>
+                        <li>Implemented dynamic <span class="gold-text">1.5s hook</span> with <span class="emerald-text">punch-in visual interrupts</span></li>
+                        <li>Custom sound design (<span class="gold-text">risers, swooshes, subtle impact hits</span>)</li>
+                        <li><span class="emerald-text">1.15x speed pacing</span> with dead-air removal and <span class="gold-text">kinetic typography</span></li>
+                        <li>Custom color grade in <span class="gold-text">DaVinci Resolve</span> & brand asset overlays</li>
                     </ul>
                 </div>
             </div>
@@ -1599,7 +1631,7 @@
                     <div>
                         <div class="film-title">SUDA | Short Film (VIPKI 2025 Submission)</div>
                         <div class="film-role">Director / Cinematographer / Editor</div>
-                        <p class="film-description">Directed camera framing, color-graded raw LOG footage in DaVinci Resolve, and executed custom multi-track audio design.</p>
+                        <p class="film-description">Directed camera framing, color-graded raw LOG footage in <span class="gold-text">DaVinci Resolve</span>, and executed custom <span class="emerald-text">multi-track audio design</span>.</p>
                     </div>
                 </div>
 
@@ -1610,7 +1642,7 @@
                     <div>
                         <div class="film-title">Retak (Azlan and the Typewriter) | MV Reimagined</div>
                         <div class="film-role">Director / Editor / Videographer</div>
-                        <p class="film-description">Directed on-camera talent, handled camera operation, narrative cutting, and final output mastering for YouTube.</p>
+                        <p class="film-description"><span class="gold-text">Directed on-camera talent</span>, handled camera operation, narrative cutting, and <span class="emerald-text">final output mastering</span> for YouTube.</p>
                     </div>
                 </div>
             </div>
@@ -1632,7 +1664,7 @@
                     <div>
                         <div class="film-title">CNY X RAYA Music Video – Sonique Studio</div>
                         <div class="film-role">Sound Designer | Music Producer | Mixing & Mastering Engineer</div>
-                        <p class="film-description">Composed custom musical themes, engineered sound effects, balanced multi-track vocal mixes, and mastered audio for digital release.</p>
+                        <p class="film-description"><span class="gold-text">Composed custom musical themes</span>, engineered sound effects, balanced multi-track vocal mixes, and <span class="emerald-text">mastered audio</span> for digital release.</p>
                     </div>
                 </div>
 
@@ -1656,7 +1688,7 @@
                     <div>
                         <div class="film-title">Jiran | VIPKI 2024 Award Winner</div>
                         <div class="film-role">Music Producer / Score Composer</div>
-                        <p class="film-description">Produced and composed the original music score for this national short film project. Secured 2nd Place (Naib Johan) in the national Pertandingan Video Pendek Kefahaman Islam (VIPKI) 2024 organized by IKIM.</p>
+                        <p class="film-description">Produced and composed the original music score for this national short film project. Secured <span class="gold-text">2nd Place (Naib Johan)</span> in the national Pertandingan Video Pendek Kefahaman Islam (VIPKI) 2024 organized by IKIM.</p>
                     </div>
                 </div>
             </div>
@@ -1726,7 +1758,7 @@
                     
                     <div class="education-details">
                         <ul>
-                            <li><strong>Academic Excellence:</strong> CGPA 3.73 / 4.00</li>
+                            <li><strong>Academic Excellence:</strong> <span class="gold-text">CGPA 3.73 / 4.00</span></li>
                             <li><strong>Focus:</strong> Digital Media Strategy, Video Production, Film Directing</li>
                         </ul>
                     </div>
@@ -1740,7 +1772,7 @@
                     
                     <div class="education-details">
                         <ul>
-                            <li><strong>Academic Excellence:</strong> CGPA 3.75 / 4.00</li>
+                            <li><strong>Academic Excellence:</strong> <span class="gold-text">CGPA 3.75 / 4.00</span></li>
                             <li><strong>Focus:</strong> Creative Media, Graphic Design, Social Media Strategy & Audio</li>
                         </ul>
                     </div>
