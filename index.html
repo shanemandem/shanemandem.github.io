@@ -1237,7 +1237,7 @@
         }
 
         /* ==========================================================================
-           17. RESPONSIVE OVERRIDES
+           17. RESPONSIVE OVERRIDES (MOBILE & TABLET OPTIMIZATION)
            ========================================================================== */
         @media (max-width: 992px) {
             .analytics-grid,
@@ -1252,9 +1252,40 @@
 
         @media (max-width: 850px) {
             section {
-                padding: 65px 0;
+                padding: 55px 0;
             }
 
+            /* --- HERO SECTION MOBILE BACKGROUND FIX --- */
+            #hero {
+                min-height: auto;
+                padding: 60px 0 40px 0;
+                /* Centers your face/portrait on mobile screens */
+                background-position: 70% center; 
+                /* Ensures contrast so text remains readable over your portrait */
+                background-image: linear-gradient(
+                    to bottom, 
+                    rgba(8, 8, 10, 0.82) 0%, 
+                    rgba(8, 8, 10, 0.92) 70%, 
+                    rgba(8, 8, 10, 0.98) 100%
+                ), url('profile.svg');
+            }
+
+            .hero-content {
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            /* --- NAVIGATION MOBILE --- */
             .mobile-menu-btn {
                 display: flex;
             }
@@ -1296,6 +1327,7 @@
                 margin-top: 6px;
             }
 
+            /* --- SINGLE COLUMN LAYOUT FOR SMALL SCREENS --- */
             .metrics-grid,
             .featured-videos-grid,
             .analytics-grid,
@@ -1305,10 +1337,31 @@
             .education-grid,
             .contact-wrapper {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .tiktok-video-grid {
                 flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-box, .connect-box {
+                padding: 24px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero {
+                /* Fine-tuned background focal point for smaller smartphones */
+                background-position: 65% 20%; 
+            }
+
+            .hero-content h1 {
+                font-size: 2.1rem;
+            }
+
+            .metric-card {
+                padding: 24px 16px;
             }
         }
 
