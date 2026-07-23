@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gregory Shane Bong | Content Creator & Social Media Strategist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. CSS RESET & COLOR VARIABLES (Obsidian & Titanium Gold Theme)
+           ========================================================================== */
+        :root {
+            --bg-primary: #08080A;      /* Deep Onyx */
+            --text-primary: #F3F4F6;    /* Platinum White */
+            --card-bg: #14151B;         /* Dark Titanium */
+            --border-color: #383B46;    /* Anodized Steel */
+            --text-muted: #8A8F9E;      /* Muted Pewter */
+            
+            /* Accents */
+            --accent-gold: #C6A87D;     /* Champagne Gold */
+            --accent-gold-hover: #E6CA94;
+            --accent-emerald: #00C897;  /* Cyber Emerald */
+            --accent-cobalt: #2563EB;   /* Royal Cobalt */
+
+            /* Typography */
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ==========================================================================
+           2. TYPOGRAPHY & TAGS
+           ========================================================================== */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            letter-spacing: -0.02em;
+        }
+
+        .gold-text {
+            color: var(--accent-gold);
+        }
+
+        .emerald-text {
+            color: var(--accent-emerald);
+        }
+
+        .tag {
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: rgba(37, 99, 235, 0.15);
+            color: #60A5FA;
+            border: 1px solid var(--accent-cobalt);
+            display: inline-block;
+        }
+
+        /* ==========================================================================
+           3. CONTAINER & BUTTONS
+           ========================================================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 65px 0;
+            position: relative;
+            border-bottom: 1px solid rgba(56, 59, 70, 0.25);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: #08080A;
+            border: 1px solid var(--accent-gold);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        /* ==========================================================================
+           4. NAVIGATION & MOBILE 3-DOTS MENU
+           ========================================================================== */
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-decoration: none !important;
+            letter-spacing: 0.05em;
+            display: inline-block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 7px 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--accent-gold);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-links a:hover {
+            background: var(--accent-gold);
+            color: #08080A;
+            box-shadow: 0 0 15px rgba(198, 168, 125, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: var(--card-bg);
+            border: 1px solid var(--accent-gold);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--accent-gold);
+        }
+
+        .dots-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .dots-icon circle {
+            fill: var(--accent-gold);
+            transition: fill 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover .dots-icon circle {
+            fill: #08080A;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dropdown-arrow {
+            font-size: 0.65rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 8px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            min-width: 160px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            width: 100%;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: none !important;
+            background: transparent !important;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--accent-gold) !important;
+            color: #08080A !important;
+            box-shadow: none !important;
+            transform: translateX(4px);
+        }
+
+        /* ==========================================================================
+           5. HERO SECTION & SCROLL DOWN CONNECTOR
+           ========================================================================== */
+        #hero {
+            width: 100%;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                to right, 
+                rgba(8, 8, 10, 0.98) 0%, 
+                rgba(8, 8, 10, 0.80) 45%, 
+                rgba(8, 8, 10, 0.10) 100%
+            ), url('profile.svg');
+            background-size: cover;
+            background-position: 95% center;
+            background-repeat: no-repeat;
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.95);
+        }
+
+        .hero-content p {
+            color: #FFFFFF !important;
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        .hero-content .tag {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .scroll-down-guide {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .scroll-down-guide:hover {
+            color: var(--accent-gold);
+        }
+
+        .scroll-down-guide span {
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .scroll-line {
+            width: 2px;
+            height: 36px;
+            background: linear-gradient(to bottom, var(--accent-gold), transparent);
+            border-radius: 2px;
+            animation: scrollPulse 2s infinite;
+        }
+
+        @keyframes scrollPulse {
+            0% { transform: scaleY(0.4); opacity: 0.3; transform-origin: top; }
+            50% { transform: scaleY(1); opacity: 1; transform-origin: top; }
+            100% { transform: scaleY(0.4); opacity: 0.3; transform-origin: bottom; }
+        }
+
+        /* ==========================================================================
+           6. METRICS SECTION
+           ========================================================================== */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ==========================================================================
+           7. FALLBACK VIDEO COVERS & THUMBNAILS
+           ========================================================================== */
+        .video-embed-container,
+        .tiktok-video-box,
+        .film-embed-container,
+        .sound-embed-container {
+            position: relative;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-color: var(--card-bg);
+        }
+
+        .embed-fallback-label {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(8, 8, 10, 0.85);
+            color: var(--accent-gold);
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--accent-gold);
+            pointer-events: none;
+            z-index: 1;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        /* ==========================================================================
+           8. TOP PERFORMING SHORT-FORM SECTION & TIKTOK EMBED CLEANUP
+           ========================================================================== */
+        .featured-videos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1100px;
+            margin: 32px auto 0 auto;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            min-width: 0;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(198, 168, 125, 0.4);
+        }
+
+        .video-card-title {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(56, 59, 70, 0.4);
+        }
+
+        .video-card-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            background: var(--bg-primary);
+            border: 1px solid rgba(56, 59, 70, 0.5);
+            border-radius: 8px;
+            padding: 8px 12px;
+        }
+
+        .video-stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .video-stat-value {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .video-stat-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        /* TIKTOK EMBED CONTAINER: EXACT VIDEO FRAME FIT & CROPPING */
+        .video-embed-container,
+        .tiktok-video-box {
+            position: relative;
+            width: 100%;
+            max-width: 310px;
+            height: 500px; /* Precise height cut-off for video frame only */
+            background: #000000;
+            border-radius: 12px;
+            overflow: hidden !important; /* Crops out white description card entirely */
+            border: 1px solid var(--border-color);
+            margin: 0 auto;
+        }
+
+        /* Force inner TikTok iframe to render full height so white caption is pushed down */
+        .video-embed-container iframe,
+        .tiktok-video-box iframe,
+        .video-embed-container blockquote,
+        .tiktok-video-box blockquote {
+            width: 100% !important;
+            min-width: 100% !important;
+            height: 740px !important; /* Forces full TikTok widget height */
+            min-height: 740px !important;
+            position: absolute !important;
+            top: -2px !important;
+            left: 0 !important;
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+        }
+
+        /* Specific override for Facebook Reels iframe in Work Experience */
+        .tiktok-video-box iframe[src*="facebook.com"] {
+            height: 100% !important;
+            min-height: 100% !important;
+            top: 0 !important;
+        }
+
+        /* ==========================================================================
+           9. SHORT FILMS & CINEMATIC PROJECTS
+           ========================================================================== */
+        .films-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            width: 100%;
+            max-width: 1100px;
+            margin: 32px auto 0 auto;
+        }
+
+        .film-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .film-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(198, 168, 125, 0.4);
+        }
+
+        .film-embed-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .film-embed-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .film-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .film-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .film-role {
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+        }
+
+        .film-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* ==========================================================================
+           10. SOUND ENGINEER SECTION
+           ========================================================================== */
+        .sound-card-wrapper {
+            max-width: 800px;
+            margin: 32px auto 0 auto;
+        }
+
+        .sound-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .sound-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(198, 168, 125, 0.4);
+        }
+
+        .sound-embed-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sound-embed-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ==========================================================================
+           11. WORK EXPERIENCE
+           ========================================================================== */
+        .section-header {
+            margin-bottom: 32px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .case-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .case-card h3 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .case-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .case-framework {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .framework-item {
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 18px;
+            background: rgba(20, 21, 27, 0.4);
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .framework-item.results-item {
+            border-left-color: var(--accent-emerald);
+        }
+
+        .framework-item strong {
+            display: block;
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+
+        .framework-item.results-item strong {
+            color: var(--accent-emerald);
+        }
+
+        .framework-item p {
+            color: #E5E7EB;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .framework-item p span.highlight {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .framework-item p span.metric-highlight {
+            color: var(--accent-emerald);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .tiktok-video-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* ==========================================================================
+           12. EDUCATION BACKGROUND SECTION
+           ========================================================================== */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1100px;
+            margin: 32px auto 0 auto;
+        }
+
+        .education-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(198, 168, 125, 0.6);
+        }
+
+        .education-badge {
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(198, 168, 125, 0.15);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            display: inline-block;
+            align-self: flex-start;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .education-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.3;
+        }
+
+        .education-institution {
+            color: var(--accent-gold);
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .education-year {
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .education-details {
+            border-top: 1px solid rgba(56, 59, 70, 0.5);
+            padding-top: 16px;
+            margin-top: 8px;
+        }
+
+        .education-details strong {
+            display: block;
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .education-details ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .education-details li {
+            position: relative;
+            padding-left: 18px;
+            color: #E5E7EB;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .education-details li::before {
+            content: "•";
+            color: var(--accent-gold);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            line-height: 1;
+            top: -1px;
+        }
+
+        .education-details li span.highlight {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        /* ==========================================================================
+           13. TECH STACK & CONTACT / CONNECT SECTION
+           ========================================================================== */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-pill {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: start;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-box, .connect-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .social-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .social-link-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 20px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            transition: fill 0.3s ease, transform 0.3s ease;
+        }
+
+        /* WHATSAPP */
+        .social-link-item.whatsapp {
+            border-color: rgba(37, 211, 102, 0.25);
+        }
+        .social-link-item.whatsapp .social-icon {
+            fill: rgba(37, 211, 102, 0.6);
+        }
+        .social-link-item.whatsapp:hover {
+            border-color: #25D366;
+            color: #25D366;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.25);
+            transform: translateX(4px);
+        }
+        .social-link-item.whatsapp:hover .social-icon {
+            fill: #25D366;
+            transform: scale(1.1);
+        }
+
+        /* 🎵 TIKTOK */
+        .social-link-item.tiktok {
+            border-color: rgba(254, 44, 85, 0.25);
+        }
+        .social-link-item.tiktok .social-icon {
+            fill: rgba(254, 44, 85, 0.6);
+        }
+        .social-link-item.tiktok:hover {
+            border-color: #FE2C55;
+            color: #FE2C55;
+            box-shadow: 0 0 15px rgba(254, 44, 85, 0.25);
+            transform: translateX(4px);
+        }
+        .social-link-item.tiktok:hover .social-icon {
+            fill: #FE2C55;
+            transform: scale(1.1);
+        }
+
+        /* 🔴 YOUTUBE */
+        .social-link-item.youtube {
+            border-color: rgba(255, 0, 0, 0.25);
+        }
+        .social-link-item.youtube .social-icon {
+            fill: rgba(255, 0, 0, 0.6);
+        }
+        .social-link-item.youtube:hover {
+            border-color: #FF0000;
+            color: #FF0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.25);
+            transform: translateX(4px);
+        }
+        .social-link-item.youtube:hover .social-icon {
+            fill: #FF0000;
+            transform: scale(1.1);
+        }
+
+        /* 📸 INSTAGRAM */
+        .social-link-item.instagram {
+            border-color: rgba(225, 48, 108, 0.25);
+        }
+        .social-link-item.instagram .social-icon {
+            fill: rgba(225, 48, 108, 0.6);
+        }
+        .social-link-item.instagram:hover {
+            border-color: #E1306C;
+            color: #E1306C;
+            box-shadow: 0 0 15px rgba(225, 48, 108, 0.25);
+            transform: translateX(4px);
+        }
+        .social-link-item.instagram:hover .social-icon {
+            fill: #E1306C;
+            transform: scale(1.1);
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================================================
+           14. RESPONSIVE MOBILE OVERRIDES
+           ========================================================================== */
+        @media (max-width: 850px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 24px;
+                background: var(--card-bg);
+                border: 1px solid var(--accent-gold);
+                border-radius: 12px;
+                padding: 16px;
+                flex-direction: column;
+                gap: 12px;
+                width: 220px;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+                z-index: 1001;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                background: rgba(8, 8, 10, 0.5);
+                margin-top: 6px;
+            }
+
+            #hero {
+                min-height: auto;
+                padding: 40px 0 60px 0;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(8, 8, 10, 0.98) 0%,
+                    rgba(8, 8, 10, 0.80) 55%,
+                    rgba(8, 8, 10, 0.35) 100%
+                ), url('profile.svg');
+                background-size: cover;
+                background-position: center bottom;
+                background-repeat: no-repeat;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.1rem;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tiktok-video-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .featured-videos-grid,
+            .films-grid,
+            .education-grid,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .video-embed-container,
+            .tiktok-video-box {
+                width: 100%;
+                max-width: 310px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-wrapper">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Shane</a>
+
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                        <svg class="dots-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="5" r="2.5" />
+                            <circle cx="12" cy="12" r="2.5" />
+                            <circle cx="12" cy="19" r="2.5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle">
+                            My Work <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#featured-videos">Short-Form</a></li>
+                            <li><a href="#short-films">Films</a></li>
+                            <li><a href="#sound-engineer">Audio</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle">
+                            About Me <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#case-studies">Experience</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle">
+                            Contact <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Gregory_Shane_Bong_Resume.pdf" download>Resume</a></li>
+                            <li><a href="#contact">Message</a></li>
+                            <li><a href="#contact">Socials</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section id="hero">
+        <div class="container hero">
+            <div class="hero-content">
+                <span class="tag" style="margin-bottom: 16px;">Social Media Specialist & Content Creator</span>
+                <h1>I craft <span class="gold-text">retention-driven videos</span> that turn casual scrollers into brand followers.</h1>
+                <p>Specialising in videography, short-form editing, and conversion-focused copywriting. I produce high-performing content designed to capture attention, boost engagement, and drive organic reach across TikTok, Reels, and YouTube.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                    <a href="#case-studies" class="btn btn-outline">View Proven Results</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#metrics" class="scroll-down-guide">
+            <span>Scroll Down</span>
+            <div class="scroll-line"></div>
+        </a>
+    </section>
+
+    <section id="metrics">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h2 style="font-size: 1.8rem; font-weight: 600;">
+                    July 2026, @shanemandem received...
+                </h2>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number gold-text">800K+</div>
+                    <div class="metric-label">Organic Impressions</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number emerald-text">36.1K+</div>
+                    <div class="metric-label">User Engagement</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number emerald-text">+312</div>
+                    <div class="metric-label">Net Followers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-videos">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2>Top Performing <span class="gold-text">Short-Form Content</span></h2>
+                <p style="color: var(--text-muted);">A curated selection of my best performing videos and viral edits.</p>
+            </div>
+
+            <div class="featured-videos-grid">
+
+                <div class="video-card">
+                    <div class="video-card-title">Apple Price Increase</div>
+                    
+                    <div class="video-card-stats">
+                        <div class="video-stat-item">
+                            <span class="video-stat-value">310K+</span>
+                            <span class="video-stat-label">Organic Views</span>
+                        </div>
+                        <div class="video-stat-item">
+                            <span class="video-stat-value emerald-text">18.3K+</span>
+                            <span class="video-stat-label">User Engagement</span>
+                        </div>
+                    </div>
+
+                    <div class="video-embed-container" style="background-image: url('thumb-apple.jpg');">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@shanemandem/video/7655482122576153873" data-video-id="7655482122576153873">
+                            <section></section>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-card-title">Jangan Salah Beli Phone</div>
+                    
+                    <div class="video-card-stats">
+                        <div class="video-stat-item">
+                            <span class="video-stat-value">21K+</span>
+                            <span class="video-stat-label">Organic Views</span>
+                        </div>
+                        <div class="video-stat-item">
+                            <span class="video-stat-value emerald-text">1.8K+</span>
+                            <span class="video-stat-label">User Engagement</span>
+                        </div>
+                    </div>
+
+                    <div class="video-embed-container" style="background-image: url('thumb-phone.jpg');">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@shanemandem/video/7664130569084718356" data-video-id="7664130569084718356">
+                            <section></section>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-card-title">Harga iPhone Mahal</div>
+                    
+                    <div class="video-card-stats">
+                        <div class="video-stat-item">
+                            <span class="video-stat-value">182K+</span>
+                            <span class="video-stat-label">Organic Views</span>
+                        </div>
+                        <div class="video-stat-item">
+                            <span class="video-stat-value emerald-text">9.2K+</span>
+                            <span class="video-stat-label">User Engagement</span>
+                        </div>
+                    </div>
+
+                    <div class="video-embed-container" style="background-image: url('thumb-iphone.jpg');">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@shanemandem/video/7654181543325224193" data-video-id="7654181543325224193">
+                            <section></section>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="short-films">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2>Short Films & <span class="gold-text">Cinematic Projects</span></h2>
+                <p style="color: var(--text-muted);">Longer-form video projects highlighting videography, color grading, and story direction.</p>
+            </div>
+
+            <div class="films-grid">
+
+                <div class="film-card">
+                    <div class="film-embed-container" style="background-image: url('thumb-suda-film.jpg');">
+                        <span class="embed-fallback-label">▶ Watch on YouTube</span>
+                        <iframe src="https://www.youtube.com/embed/WtGDujQVa14" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-title">SUDA | Short Film Penyertaan VIPKI 2025</div>
+                        <div class="film-role">Director / Cinematographer / Editor</div>
+                        <p class="film-description">
+                            Directed camera angles, color-graded raw log footage in DaVinci Resolve, and managed audio design for maximum cinematic impact.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="film-card">
+                    <div class="film-embed-container" style="background-image: url('thumb-retak-film.jpg');">
+                        <span class="embed-fallback-label">▶ Watch on YouTube</span>
+                        <iframe src="https://www.youtube.com/embed/VOekhaaw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-title">Retak (Azlan and the Typewriter) | MV Reimagined</div>
+                        <div class="film-role">Director / Editor / Videographer</div>
+                        <p class="film-description">
+                            Directing talent, camera operation, sound editing, and final narrative cut for YouTube release.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sound-engineer">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2>Sound <span class="gold-text">Engineering</span></h2>
+                <p style="color: var(--text-muted);">Audio production, sound design, music composition, mixing, and mastering projects.</p>
+            </div>
+
+            <div class="sound-card-wrapper">
+                <div class="sound-card">
+                    <div class="sound-embed-container" style="background-image: url('thumb-cny-raya.jpg');">
+                        <span class="embed-fallback-label">▶ Watch on YouTube</span>
+                        <iframe src="https://www.youtube.com/embed/tA04Y_ANZcI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-title">CNY X RAYA MUSIC VIDEO by Sonique Studio</div>
+                        <div class="film-role">Sound Designer | Music Producer | Mixing & Mastering Engineer</div>
+                        <p class="film-description">
+                            Handled full audio and music design including custom sound design, music composition, multi-track mixing, and final mastering for high-fidelity output.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Work <span class="gold-text">Experience</span></h2>
+                <p style="color: var(--text-muted);">Created strategic short-form content from concept to publication, specialising in videography, video editing, and copywriting to help brands grow their digital presence.</p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 40px;">
+
+                <div class="case-card">
+                    <div>
+                        <div class="case-meta">
+                            <span class="tag">Natural Options</span>
+                            <span class="tag" style="border-color: var(--accent-gold); color: var(--accent-gold);">Internship</span>
+                        </div>
+                        <h3>Short-Form Video Content Creator</h3>
+                        
+                        <div class="case-framework">
+                            <div class="framework-item">
+                                <strong>Duration</strong>
+                                <p><span class="highlight">Feb - Aug 2026</span></p>
+                            </div>
+                            <div class="framework-item">
+                                <strong>Job Scope</strong>
+                                <p>Implementing <span class="highlight">high-pace, retention-focused video hooks</span> combined with strategic copywriting and dynamic editing.</p>
+                            </div>
+                            <div class="framework-item">
+                                <strong>The Execution</strong>
+                                <p>Scripted video hooks, produced high-quality edits, and deployed <span class="highlight">optimized content calendars</span>.</p>
+                            </div>
+                            <div class="framework-item results-item">
+                                <strong>The Results</strong>
+                                <p><span class="metric-highlight">Generated 187K+ organic views</span> across social campaigns.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tiktok-video-grid">
+                        <div class="tiktok-video-box" style="background-image: url('thumb-surya1.jpg');">
+                            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@surya.malaysia/video/7612948407010872588" data-video-id="7612948407010872588">
+                                <section></section>
+                            </blockquote>
+                        </div>
+
+                        <div class="tiktok-video-box" style="background-image: url('thumb-surya2.jpg');">
+                            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@surya.malaysia/video/7616273785280351489" data-video-id="7616273785280351489">
+                                <section></section>
+                            </blockquote>
+                        </div>
+
+                        <div class="tiktok-video-box" style="background-image: url('thumb-facebook-reel.jpg');">
+                            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1991459398241802%2F&show_text=false&width=267&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--accent-gold), transparent); opacity: 0.6; margin: 10px 0;"></div>
+
+                <div class="case-card">
+                    <div>
+                        <div class="case-meta">
+                            <span class="tag">Dough Re Mi Donuts</span>
+                            <span class="tag" style="border-color: var(--accent-gold); color: var(--accent-gold);">Freelance</span>
+                        </div>
+                        <h3>Video Editor</h3>
+                        
+                        <div class="case-framework">
+                            <div class="framework-item">
+                                <strong>Duration</strong>
+                                <p><span class="highlight">2022</span></p>
+                            </div>
+                            <div class="framework-item">
+                                <strong>Job Scope</strong>
+                                <p>Implementing <span class="highlight">creative branding</span> with SEO copywriting and dynamic editing.</p>
+                            </div>
+                            <div class="framework-item">
+                                <strong>The Execution</strong>
+                                <p>Produced <span class="highlight">high-quality video editing</span> tailored specifically to brand aesthetics and engagement goals.</p>
+                            </div>
+                            <div class="framework-item results-item">
+                                <strong>The Results</strong>
+                                <p><span class="metric-highlight">Generated 60K+ organic views</span> on brand promotional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2>Education <span class="gold-text">Background</span></h2>
+                <p style="color: var(--text-muted);">Academic qualifications and specialized training in creative media and communication.</p>
+            </div>
+
+            <div class="education-grid">
+                
+                <div class="education-card">
+                    <span class="education-badge">Bachelor's Degree</span>
+                    <div class="education-title">Bachelor of Social Communication (Media Studies)</div>
+                    <div class="education-institution">Universiti Pendidikan Sultan Idris</div>
+                    <div class="education-year">2023 – 2026</div>
+                    
+                    <div class="education-details">
+                        <strong>Key Highlights & Qualifications</strong>
+                        <ul>
+                            <li><span class="highlight">Major / Focus:</span> Media Studies, Communication & Video Production</li>
+                            <li><span class="highlight">Academic Achievement:</span> <span class="emerald-text" style="font-weight: 700;">3.73 CGPA</span></li>
+                            <li><span class="highlight">Relevant Coursework:</span> Digital Media Strategy, Content Creation, Film Directing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <span class="education-badge">Diploma</span>
+                    <div class="education-title">Diploma in Mass Communication</div>
+                    <div class="education-institution">Universiti Teknologi MARA</div>
+                    <div class="education-year">2019 – 2021</div>
+                    
+                    <div class="education-details">
+                        <strong>Key Highlights & Qualifications</strong>
+                        <ul>
+                            <li><span class="highlight">Field of Study:</span> Creative Media, Graphic Design & Audio Production</li>
+                            <li><span class="highlight">Academic Achievement:</span> <span class="emerald-text" style="font-weight: 700;">3.75 CGPA</span></li>
+                            <li><span class="highlight">Relevant Coursework:</span> Social Media Strategy, Videography, Film Directing</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & <span class="gold-text">Capabilities</span></h2>
+                <p style="color: var(--text-muted);">Tools and platforms utilized to produce high-value content and drive audience growth.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-pill">Videography</div>
+                <div class="skill-pill">Adobe Premiere Pro</div>
+                <div class="skill-pill">CapCut Pro</div>
+                <div class="skill-pill">DaVinci Resolve</div>
+                <div class="skill-pill">Conversion Copywriting</div>
+                <div class="skill-pill">Short-Form Video Editing</div>
+                <div class="skill-pill">Meta Business Suite</div>
+                <div class="skill-pill">TikTok Analytics</div>
+                <div class="skill-pill">Google Analytics</div>
+                <div class="skill-pill">Content Strategy</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" style="background: rgba(20, 21, 27, 0.5);">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2>What People <span class="gold-text">Say</span></h2>
+                <p style="color: var(--text-muted);">Endorsements from others.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-gold); padding: 32px; border-radius: 12px; box-shadow: 0 14px 35px rgba(0,0,0,0.5);">
+                <p style="font-size: 1.05rem; color: #E5E7EB; font-style: italic; line-height: 1.7; margin-bottom: 20px;">
+                    "Shane consistently brought fresh, ideas and video concepts to our company. His ability to script, film, and edit so quickly helped us generate a lot of views organically while staying true to our brand tone."
+                </p>
+                <div>
+                    <strong style="color: var(--accent-gold); display: block; font-size: 1rem;">Douglas Lee</strong>
+                    <span style="color: var(--text-muted); font-size: 0.85rem;">Natural Options Director</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <div class="contact-box">
+                    <h2 style="margin-bottom: 8px;">Let's Work <span class="gold-text">Together</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+                        Available for permanent roles, freelance contracts, and creative consultations.
+                    </p>
+                    
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="e.g. Ali Abu" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Work Email</label>
+                            <input type="email" placeholder="name@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Company / Brand Name</label>
+                            <input type="text" placeholder="Your business or brand name">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Contact Me</button>
+                    </form>
+                </div>
+
+                <div class="connect-box">
+                    <h2 style="margin-bottom: 8px;">Connect <span class="gold-text">With Me</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+                        Follow my daily content, video breakdown reels, or message me directly on WhatsApp.
+                    </p>
+
+                    <div class="social-links-list">
+                        <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20Shane,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-link-item whatsapp">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@shanemandem" target="_blank" rel="noopener noreferrer" class="social-link-item tiktok">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.9 2.836 2.895 2.895 0 0 1-2.892-2.895 2.895 2.895 0 0 1 2.892-2.895c.348 0 .684.062 1.002.175v-3.568a6.38 6.38 0 0 0-1.002-.08 6.34 6.34 0 0 0-6.34 6.346 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.054a8.216 8.216 0 0 0 4.773 1.517V7.126a4.83 4.83 0 0 1-1.008-.44z"/>
+                            </svg>
+                            <span>TikTok (@shanemandem)</span>
+                        </a>
+
+                        <a href="https://www.youtube.com/@shaneman4k" target="_blank" rel="noopener noreferrer" class="social-link-item youtube">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                            <span>YouTube (@shaneman4k)</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/shaneman4k" target="_blank" rel="noopener noreferrer" class="social-link-item instagram">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            <span>Instagram (@shaneman4k)</span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gregory Shane Bong. Social Media Specialist & Content Creator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('active');
+            });
+
+            document.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
