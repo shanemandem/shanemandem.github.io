@@ -614,7 +614,7 @@
         }
 
         /* ==========================================================================
-           9. WORK EXPERIENCE SECTION (PROMOTED HIERARCHY)
+           9. WORK EXPERIENCE SECTION (PROMOTED HIERARCHY & FIXED VIDEO SIZING)
            ========================================================================== */
         .case-card {
             background: var(--card-bg);
@@ -706,12 +706,30 @@
             border-radius: 12px;
             overflow: hidden !important;
             border: 1px solid var(--border-color);
+            margin: 0 auto;
         }
 
-        .tiktok-video-box iframe {
+        /* Fully Sized & Centered TikTok Embeds */
+        .tiktok-video-box iframe,
+        .tiktok-video-box blockquote {
             width: 100% !important;
+            min-width: 100% !important;
+            height: 720px !important;
+            min-height: 720px !important;
+            position: absolute !important;
+            top: -2px !important;
+            left: 0 !important;
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Dedicated Facebook Reel Embed Adjustment */
+        .tiktok-video-box iframe[src*="facebook"] {
             height: 100% !important;
-            border: none;
+            min-height: 100% !important;
+            top: 0 !important;
+            object-fit: cover;
         }
 
         /* ==========================================================================
